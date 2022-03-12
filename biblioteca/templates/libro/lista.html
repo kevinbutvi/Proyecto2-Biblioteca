@@ -1,0 +1,22 @@
+<h4>
+    Lista de Libros
+</h4>
+
+<p>
+    <form method="get"> {% csrf_token %}
+        <input type="text" id="input-titulo" name="input-titulo" placeholder="Ingrese nombre">
+        <input type="date" id="input-fecha1" name="input-fecha1" placeholder="Ingrese fecha INICIO">
+        <input type="date" id="input-fecha2" name="input-fecha2" placeholder="Ingrese fecha FIN">
+        <button type="submit"> Consultar </button>
+    </form>
+</p>
+
+<ul>
+    
+    {% for libro in lista_libros %}
+        <li>
+            {{ libro.titulo }} -- -- {{ libro.categoria }} -- {{ libro.fecha }}
+        </li>
+    {% endfor %}
+        
+</ul>

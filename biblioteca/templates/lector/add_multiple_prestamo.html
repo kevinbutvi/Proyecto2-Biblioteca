@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> Prestar Libros Check </h2>
+    <form method="post"> {% csrf_token %}
+        <h3> Lector: {{ form.lector }}</h3>
+        <h5> Libro: {{ form.libro }}</h5>
+        <button type="submit"> Guardar </button>
+    </form>
+</body>
+</html>
